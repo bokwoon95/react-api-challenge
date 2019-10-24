@@ -1,13 +1,17 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Search from "./Search";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/search" component={Search} />
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
