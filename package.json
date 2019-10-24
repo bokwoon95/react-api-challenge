@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "all": "npx concurrently 'cd frontend && npm start' 'cd backend && nodemon index.js'"
+    "all": "concurrently 'cd frontend && npm start' 'nodemon backend/index.js'"
   },
   "keywords": [],
   "author": "",
