@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Card from "./Card"
+
 
 export default function Search() {
     
@@ -6,13 +8,16 @@ export default function Search() {
     const [added, add] = useState([]);
     const [found, searched] = useState([]);
     
-    function searchText(keyword){
-        fetch("https://api.github.com/search/users?q="+keyword+"&per_page=9")
+    function searchText(word){
+        fetch("https://api.github.com/search/users?q="+word+"&per_page=9")
         .then(res=>res.json())
         .then(data=>searched(data.items))
         console.log(found)
     };
     
+    function renderCards(){
+        
+    }
 
     return(
         <div>
